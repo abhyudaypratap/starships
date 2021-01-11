@@ -1,0 +1,5 @@
+DEBUG=True
+FLASK_ENV=development
+FLASK_APP=starships.app.py
+APP_SETTINGS=starships.config.DevelopmentConfig
+DATABASE_URL=postgres://{user}:{password}@{hostname}:{port}/{database-name}

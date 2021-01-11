@@ -1,0 +1,10 @@
+-r requirements.txt
+coverage
+flake8
+flake8-bugbear
+freezegun
+pytest
+pytest-cov
+pytest-mock
+pytest-xdist
+responses
