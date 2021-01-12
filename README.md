@@ -7,8 +7,8 @@
 
 Currently, following features are implemented:
 
-* Retrieval a list of all starships
-* Hyperdrive rating
+* Retrieve list of all starships
+* Sort starships with Hyperdrive rating
 
 
 
