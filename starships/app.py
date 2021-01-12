@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, jsonify
 from flask_restful import Resource, Api
 
 from .manage import db, Starship
@@ -19,12 +19,28 @@ app.config.from_object(os.environ.get("APP_SETTINGS"))
 def home():
     return 'Starships: Welcome to hyperdrive rating'
 
+
+def starship_serialize(data):
+    """
+    Input: Sql query result
+    Output: List of starships
+    """
+    result = [{'id': i.id,'name': i.name, 'hyperdrive_rating': i.hyperdrive_rating} for i in data]
+    return result
+
+
 class FetchStarships(Resource):
+    """
+    Fetch all the starships from database
+    """
     def get(self):
-        user = Starship.query.all()
-        return {}
+        data = Starship.query.order_by(Starship.hyperdrive_rating.desc()).all()
+        return jsonify(starship_serialize(data))
 
 class SWAPIFetchStarships(Resource):
+    """
+    Retrive the starships from SWAPI maintained by BACK4APP
+    """
     def get(self):
         where = urllib.parse.quote_plus("""
         {

@@ -17,12 +17,32 @@ Currently, following features are implemented:
 
 
 This is how you set up an development instance of Starship:
+# Setup
 
-* Create a virtualenv
-* Configuration
-    * `make devconfig`
+### Install backend dependencies
+* [postgres (version>= 11)](https://www.postgresql.org/)
+* [virtualenv](https://virtualenv.pypa.io/en/stable/)
+
+## Database Setup
+* Create a db `starwars_db`
+
+## Backend Setup
+
+### Update db details 
+change your db details in `eatout_app/settings/dev.py`
+
+### setup env files
+Add `.env` files.
+
+### virtualenv setup
+* `vitualenv venv`
+* `source venv/bin/activate`
+
+### install requirements
+`pip install -r requirements/requirements.txt`
+
 * Install dependencies and Starship
     * `make install`
 * Run the development server
-    * `make run`
+    * `flask run`
 * Visit [localhost:5000](http://localhost:5000)
