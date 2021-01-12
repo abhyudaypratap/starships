@@ -26,3 +26,11 @@ class DevelopmentConfig(Config):
     DEVELOPMENT = True
     SECRET_KEY = os.environ.get("SECRET_TEST_ENV")
     SQLALCHEMY_TRACK_MODIFICATIONS = True
+
+
+class TestingConfig(Config):
+    TESTING = True
+    ENV = "testing"
+    SECRET_KEY = "GGggjjjfk887856$%kk"
+    # Disable CSRF protection in the testing configuration
+    WTF_CSRF_ENABLED = False
