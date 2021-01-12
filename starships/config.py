@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Config(object):
     DEBUG = False
@@ -12,11 +15,11 @@ class Config(object):
 
 class ProductionConfig(Config):
     DEBUG = False
-    SECRET_KEY = "K2kppfJnuK8@OK!LCnJt*7*hd8VA&EUa7FJC$b"
+    SECRET_KEY = os.environ.get("SECRET_PRODUCTION_ENV")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class DevelopmentConfig(Config):
     ENV = "development"
     DEVELOPMENT = True
-    SECRET_KEY = "secret_for_test_environment"
+    SECRET_KEY = os.environ.get("SECRET_TEST_ENV")
     SQLALCHEMY_TRACK_MODIFICATIONS = True
