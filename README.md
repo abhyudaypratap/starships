@@ -1,8 +1,7 @@
 # Starship
 
-[![Build Status]
-[![codecov]
-[![requires]
+![Starship](https://github.com/abhyudaypratap/starships/workflows/Starships%20application/badge.svg)
+
 
 *Starship is a retrival software written in Python using the micro framework Flask.*
 
