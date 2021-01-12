@@ -13,4 +13,6 @@ Jinja2==2.11.2
 MarkupSafe==1.1.1
 Werkzeug==1.0.1
 python-dotenv==0.15.0
+Flask-Script==2.0.6
+psycopg2==2.8.6
 -e .

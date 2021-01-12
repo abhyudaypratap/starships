@@ -26,11 +26,7 @@ This is how you set up an development instance of Starship:
 ## Database Setup
 * Create a db `starwars_db`
 
-## Backend Setup
-
-### Update db details 
-change your db details in `eatout_app/settings/dev.py`
-
+## Backend Set
 ### setup env files
 Add `.env` files.
 

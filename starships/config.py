@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class Config(object):
     DEBUG = False
     TESTING = False
@@ -13,10 +14,12 @@ class Config(object):
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = 'None'
 
+
 class ProductionConfig(Config):
     DEBUG = False
     SECRET_KEY = os.environ.get("SECRET_PRODUCTION_ENV")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
 
 class DevelopmentConfig(Config):
     ENV = "development"
