@@ -1,5 +1,9 @@
 DEBUG=True
+SECRET_TEST_ENV=SECRET_TEST_ENV
+SECRET_PRODUCTION_ENV=SECRET_PRODUCTION_ENV
 FLASK_ENV=development
 FLASK_APP=starships.app.py
 APP_SETTINGS=starships.config.DevelopmentConfig
-DATABASE_URL=postgres://{user}:{password}@{hostname}:{port}/{database-name}
+DATABASE_URL=postgresql://jedi:password@localhost:5432/starwars_db
+Application_Id=cy2MmNfv50NCCxrHcYbsRSiTMMwJXertfvdsgwe
+REST_API_Key=dfg43dfg34543dfdgsi1GHAbkC0UVbAULM7rHMnEpWx

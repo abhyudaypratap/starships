@@ -16,18 +16,15 @@ Currently, following features are implemented:
 
 
 This is how you set up an development instance of Starship:
-# Setup
+# Setup for development
 
 ### Install backend dependencies
 * [postgres (version>= 11)](https://www.postgresql.org/)
 * [virtualenv](https://virtualenv.pypa.io/en/stable/)
 
-## Database Setup
-* Create a db `starwars_db`
-
 ## Backend Set
 ### setup env files
-Add `.env` files.
+Add `.env` files.(check env-sample)
 
 ### virtualenv setup
 * `vitualenv venv`
@@ -36,8 +33,22 @@ Add `.env` files.
 ### install requirements
 `pip install -r requirements/requirements.txt`
 
-* Install dependencies and Starship
-    * `make install`
+
+## Database Setup
+* Create a db `starwars_db`
+* Setup DB
+    * Run below commands in terminal after creating database to intialize and populate the DB
+    ```json
+    python manage.py db initdb
+    python manage.py db migrate
+    python manage.py db upgrade
+    python manage.py update_starships
+    ```
+
+
 * Run the development server
     * `flask run`
 * Visit [localhost:5000](http://localhost:5000)
+
+* APIs
+Refer to [STARSHIPS.md](docs/api/STARSHIPS.md).

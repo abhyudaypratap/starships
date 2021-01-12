@@ -33,7 +33,7 @@ class FetchStarships(Resource):
     Fetch all the starships from database
     """
     def get(self):
-        data = Starship.query.order_by(Starship.hyperdrive_rating.desc()).all()
+        data = Starship.query.order_by(Starship.hyperdrive_rating.desc()).all()  # sorted by hyperdrive rating
         return jsonify(starship_serialize(data))
 
 
