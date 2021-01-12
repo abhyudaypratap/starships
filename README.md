@@ -52,3 +52,7 @@ Add `.env` files.(check env-sample)
 
 * APIs
 Refer to [STARSHIPS.md](docs/api/STARSHIPS.md).
+
+## Deployment
+Deployment done on Google cloud using github actions
+* Just add the credentials to secrets in GitHub settings for deployment
